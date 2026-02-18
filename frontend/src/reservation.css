@@ -1,0 +1,195 @@
+.reservation-container {
+  padding: 16px 18px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.reservation-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.reservation-grid-wrapper {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.headers-row { 
+  display: flex; 
+  border-bottom: 1px solid #eee;
+}
+
+.grid-day { 
+  border-left: 1px solid #eee; 
+  background: #f6f8fa; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.grid-day-number { 
+  font-size: 13px; 
+  font-weight: 700; 
+}
+
+.floor-header div:first-child { 
+  background: #fdfdfd; 
+  border-bottom: 1px solid #f0f0f0; 
+  font-weight: 700; 
+}
+
+.collapse-btn { 
+  background: transparent; 
+  border: none; 
+  cursor: pointer; 
+  font-size: 14px; 
+  padding: 4px;
+}
+
+.room-row-wrapper { 
+  display: flex; 
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.room-info-cell {
+  border-right: 1px solid #eee;
+  background: #fafafa;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.room-day-container {
+  flex: 1;
+  position: relative;
+  background: #fff;
+}
+
+.grid-row-cells { 
+  display: grid; 
+  height: 100%;
+}
+
+.grid-cell { 
+  border-right: 1px solid #f6f6f6; 
+  height: 100%;
+}
+
+.event-bar {
+  position: absolute;
+  background: linear-gradient(90deg, #4fb3ff, #2a8ef6);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(20,40,70,0.15);
+  cursor: pointer;
+  z-index: 5;
+  transition: transform .12s ease, box-shadow .12s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translateX(-50%);
+}
+
+.event-bar:hover {
+  transform: translateX(-50%) translateY(-6px);
+  z-index: 30;
+  box-shadow: 0 8px 20px rgba(20,40,70,0.22);
+}
+
+.event-title {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-meta { 
+  font-size: 11px; 
+  opacity: 0.9; 
+  margin-top: 4px; 
+  white-space: nowrap;
+}
+
+.event-popover {
+  position: fixed;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  padding: 16px;
+  padding-top: 55px;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+.popover-header {
+  margin-bottom: 8px;
+}
+
+.popover-header strong {
+  display: block;
+  font-size: 16px;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.more-pill {
+  background: rgba(0,0,0,0.08);
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(20,40,70,0.06);
+  z-index: 40;
+  pointer-events: auto;
+}
+.more-pill:hover { background: rgba(0,0,0,0.12); }
+
+.more-popover > div + div {
+  border-top: 1px solid #f2f2f2;
+}
+.more-popover div[role="item"] { padding: 8px; }
